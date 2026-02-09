@@ -311,6 +311,12 @@ btnStart.addEventListener('click', async () => {
 
 btnPause.addEventListener('click', async () => {
     try {
+        // Defensa: Solo permitir un break por jornada
+        if (currentPauses.length > 0) {
+            showDashboardMessage('Solo se permite un break por turno', 'error');
+            return;
+        }
+
         const now = new Date().toISOString();
         
         // 1. Actualizar estado de jornada
