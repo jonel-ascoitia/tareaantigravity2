@@ -6,6 +6,7 @@ Este proyecto es un MVP (Producto Mínimo Viable) para el registro y control de 
 
 - **Autenticación**: Registro e inicio de sesión seguro con Supabase Auth.
 - **Control de Jornada**:
+- **Control de Jornada**:
   - **INICIAR TURNO**: Iniciar jornada.
   - **INICIAR BREAK / REANUDAR TURNO**: Gestión de pausas (breaks). **Nota**: El break es obligatorio de 45 minutos.
   - **TERMINAR TURNO**: Finalizar jornada.
