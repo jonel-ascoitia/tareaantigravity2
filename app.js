@@ -195,30 +195,40 @@ function updateControls() {
     } else if (currentSession.estado === 'pausada') {
         statusBadge.textContent = 'En Break';
         statusBadge.style.color = 'var(--warning)';
-        breakTimerDisplay.classList.remove('hidden');
         
-        // Buscar pausa activa
-        const activePause = currentPauses.find(p => !p.fin);
-        if (activePause) {
-            const now = new Date();
-            const pauseStart = new Date(activePause.inicio);
-            const elapsed = now - pauseStart;
-            const required = 45 * 60 * 1000;
-            const remaining = required - elapsed;
-            
-            if (remaining > 0) {
-                btnResume.disabled = true;
-                const { m, s } = msToHms(remaining);
-                breakTimerDisplay.textContent = `Break: ${pad(m)}:${pad(s)}`;
-                breakTimerDisplay.classList.remove('finished');
-            } else {
-                btnResume.disabled = false;
-                breakTimerDisplay.textContent = '✓ Break completado';
-                breakTimerDisplay.classList.add('finished');
-            }
-        }
+        updateBreakTimer(); // Actualizar timer de break inmediatamente
         
         btnResume.classList.remove('hidden');
+    }
+}
+
+function updateBreakTimer() {
+    if (!currentSession || currentSession.estado !== 'pausada') {
+        breakTimerDisplay.classList.add('hidden');
+        return;
+    }
+
+    breakTimerDisplay.classList.remove('hidden');
+
+    // Buscar pausa activa
+    const activePause = currentPauses.find(p => !p.fin);
+    if (activePause) {
+        const now = new Date();
+        const pauseStart = new Date(activePause.inicio);
+        const elapsed = now - pauseStart;
+        const required = 45 * 60 * 1000;
+        const remaining = required - elapsed;
+        
+        if (remaining > 0) {
+            btnResume.disabled = true;
+            const { m, s } = msToHms(remaining);
+            breakTimerDisplay.textContent = `Break: ${pad(m)}:${pad(s)}`;
+            breakTimerDisplay.classList.remove('finished');
+        } else {
+            btnResume.disabled = false;
+            breakTimerDisplay.textContent = '✓ Break completado';
+            breakTimerDisplay.classList.add('finished');
+        }
     }
 }
 
@@ -240,6 +250,11 @@ function updateTimerDisplay() {
     if (!currentSession) {
         timerDisplay.textContent = '00:00:00';
         return;
+    }
+
+    // Actualizar también el timer de break si estamos en pausa
+    if (currentSession.estado === 'pausada') {
+        updateBreakTimer();
     }
 
     const now = new Date();
