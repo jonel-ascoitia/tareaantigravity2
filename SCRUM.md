@@ -79,7 +79,6 @@ _(Simulación de Tablero Kanban)_
 
 ## 📦 Incremento Funcional
 
-El código actual en `c:\xampp\htdocs\ANTIGRAVITY` representa el incremento funcional terminado.
+El código actual en `ANTIGRAVITY` representa el incremento funcional terminado.
 
 - **Tech Stack**: HTML5, CSS3, Vanilla JS, Supabase.
-- **Estado**: Listo para ejecución local con XAMPP.
