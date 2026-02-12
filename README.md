@@ -12,7 +12,7 @@ Este proyecto es un MVP (Producto Mínimo Viable) para el registro y control de 
   - **TERMINAR TURNO**: Finalizar jornada.
 - **Persistencia**: Todos los datos se guardan en una base de datos PostgreSQL (Supabase).
 - **Historial**: Visualización de jornadas anteriores con horas totales calculadas.
-
+hola buneos dias soy ojonel 
 ## 🛠️ Arquitectura y Tecnologías
 
 El proyecto sigue una arquitectura **Frontend Vanilla** conectada a servicios Backend:
