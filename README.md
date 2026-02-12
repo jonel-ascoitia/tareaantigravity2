@@ -40,7 +40,7 @@ El proyecto sigue una arquitectura **Frontend Vanilla** conectada a servicios Ba
     - Corre el script `schema.sql` en el SQL Editor de tu proyecto para crear las tablas y políticas.
 3.  **Configurar Credenciales**:
     - Renombra `config.example.js` a `config.js` (si aplica) o edita `config.js`.
-    - Pega tu `SUPABASE_URL` y `SUPABASE_ANON_KEY`.
+    - Pega tu `SUPABASE_URL=https://hepkljurqjkypjhdmuhq.supabase.co` y `SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhlcGtsanVycWpreXBqaGRtdWhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzA1OTY0NzEsImV4cCI6MjA4NjE3MjQ3MX0.fgkJVlIFpvqLlw8mSDMTyVVtvlL6IOIyqrLY3W2yM0Q`.
 4.  **Ejecutar**:
     - Abre el archivo `index.html` en tu navegador o usa un servidor local (ej. Live Server).
     - Regístrate con un email y contraseña.
