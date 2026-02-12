@@ -33,7 +33,7 @@ El proyecto sigue una arquitectura **Frontend Vanilla** conectada a servicios Ba
 
 1.  **Clonar el repositorio**:
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone <https://github.com/jonel-ascoitia/tareaantigravity2>
     ```
 2.  **Configurar Base de Datos**:
     - Crea un proyecto en [Supabase](https://supabase.com).
