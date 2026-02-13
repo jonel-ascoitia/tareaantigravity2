@@ -1,5 +1,8 @@
 # Control Horario MVP - Sprint 0 (TAREA 1)
+ Credenciales
 12345678910
+
+main
 Este proyecto es un MVP (Producto Mínimo Viable) para el registro y control de jornadas laborales, desarrollado como parte del Sprint 0 del bootcamp de Antigravity.
 
 ## 🚀 Funcionalidades
@@ -33,7 +36,7 @@ El proyecto sigue una arquitectura **Frontend Vanilla** conectada a servicios Ba
 
 1.  **Clonar el repositorio**:
     ```bash
-    git clone <URL_DEL_REPOSITORIO>
+    git clone <https://github.com/jonel-ascoitia/tareaantigravity2>
     ```
 2.  **Configurar Base de Datos**:
     - Crea un proyecto en [Supabase](https://supabase.com).
@@ -60,3 +63,4 @@ Durante este Sprint, el equipo aprendió a:
 - **Video Demo**: [Link al video de presentación]
   ## Realizando mi primer pullrequest
   -cambiando solo un texto
+  -mas texto y mas texto  ldsfhkldsjglksdjfldsjgl
